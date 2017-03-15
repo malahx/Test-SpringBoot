@@ -2,12 +2,12 @@ package com.kornog.vcm;
 
 import java.util.List;
 
-import org.mapstruct.factory.Mappers;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.*;
-import org.springframework.boot.autoconfigure.*;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.kornog.vcm.dao.model.Vehicule;
 import com.kornog.vcm.dto.model.VehiculeDTO;
@@ -24,14 +24,14 @@ public class Main {
 	VehiculeManager manager;
 
 	@Autowired
-	VehiculeMapper mapper = Mappers.getMapper(VehiculeMapper.class);
+	VehiculeMapper mapper;
 
 	@RequestMapping("/vehicules")
 	List<VehiculeDTO> vehicules() {
 
 		List<Vehicule> vehicules = manager.getVehicules();
 
-		//return VehiculeMapper.INSTANCE.toVehiculeDTOs(vehicules);
+		// return VehiculeMapper.INSTANCE.toVehiculeDTOs(vehicules);
 		return mapper.toVehiculeDTOs(vehicules);
 	}
 
