@@ -33,7 +33,7 @@ function disconnect() {
 }
 
 function sendName() {
-    stompClient.send("/app/ws", {}, JSON.stringify({'immat': $("#name").val()}));
+    stompClient.send("/app/addVehicule", {}, JSON.stringify({'immat': $("#name").val()}));
 }
 
 function showVehicules(vehicules) {
