@@ -6,4 +6,5 @@ import com.kornog.vcm.dao.model.Vehicule;
 
 public interface VehiculeManager {
 	public List<Vehicule> getVehicules();
+	public boolean addVehicule(Vehicule v);
 }

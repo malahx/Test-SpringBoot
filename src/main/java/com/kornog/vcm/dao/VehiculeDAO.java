@@ -6,4 +6,5 @@ import com.kornog.vcm.dao.model.Vehicule;
 
 public interface VehiculeDAO {
 	public List<Vehicule> findAll();
+	public void insert(Vehicule v);
 }

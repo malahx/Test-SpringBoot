@@ -19,4 +19,10 @@ public class VehiculeManagerImpl implements VehiculeManager {
 		return dao.findAll();
 	}
 
+	@Override
+	public boolean addVehicule(Vehicule v) {
+		dao.insert(v);
+		return true;
+	}
+
 }
