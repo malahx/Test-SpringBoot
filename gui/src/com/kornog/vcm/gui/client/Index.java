@@ -12,6 +12,8 @@ public class Index implements EntryPoint {
 	 * This is the entry point method.
 	 */
 	public void onModuleLoad() {
+		
+		// Loading of the VehiculeAdd ui
 		RootPanel.get("appContainer").add(new VehiculeAdd());
 	}
 }

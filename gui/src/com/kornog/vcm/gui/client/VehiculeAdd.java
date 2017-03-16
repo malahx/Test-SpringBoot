@@ -23,6 +23,7 @@ import com.kornog.vcm.gui.shared.VehiculeDTO;
 
 public class VehiculeAdd extends Composite {
 
+	// API REST to get all vehicules
 	final String API_VEHICULES = "http://127.0.0.1:8080/api/vehicules";
 
 	private static VehiculeAddUiBinder uiBinder = GWT.create(VehiculeAddUiBinder.class);
@@ -39,6 +40,10 @@ public class VehiculeAdd extends Composite {
 
 	public VehiculeAdd() {
 		initWidget(uiBinder.createAndBindUi(this));
+
+		/**
+		 * onload to load all vehicules
+		 */
 		panel.addAttachHandler(new AttachEvent.Handler() {
 
 			@Override
