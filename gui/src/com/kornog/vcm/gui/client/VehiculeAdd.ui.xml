@@ -1,21 +1,13 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
-	<ui:style>
-	.important {
-		font-weight: bold;
-	}
-	</ui:style>
 	<g:HTMLPanel ui:field="panel">
 		<div id="main-content" class="container">
 			<div class="row">
 				<div class="col-md-6">
 					<form class="form-inline">
 						<div class="form-group">
-							<label for="connect">WebSocket connection:</label>
-							<button id="connect" class="btn btn-default" type="submit">Connect</button>
-							<button id="disconnect" class="btn btn-default" type="submit"
-								disabled="disabled">Disconnect</button>
+							<button ui:field="refresh" class="btn btn-default" type="submit">Refresh</button>
 						</div>
 					</form>
 				</div>
